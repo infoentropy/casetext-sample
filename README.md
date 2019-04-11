@@ -12,3 +12,8 @@ $ heroku config:set PUBLISHABLE_KEY=<STRIPE_PUBLIC_KEY> SECRET_KEY=<STRIPE_PRIVA
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
+
+
+Built using Heroku's starter setup that I found.
+
+https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true
