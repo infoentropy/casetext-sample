@@ -1,0 +1,37 @@
+<div class="footer container">
+	<div class="row">
+    <div class="col-lg-3">
+      <p>Make your practice more effective and efficient with Casetext’s legal research suite.</p>
+      <button class="btn btn-primary btn-lg">Get a Demo</button>
+    </div>
+    <div class="col-lg-3">
+        <ul class="nav flex-column">
+<% ["Tour", "Product", "Pricing", "Switch", "Big Firm", "Coverage"].forEach( (obj, idx) => { %>
+<%- include('../partials/navitem.ejs', {obj:obj}); %>
+<% }) %>
+        </ul>
+    </div>
+    <div class="col-lg-3">
+        <ul class="nav flex-column">
+<% ["About us", "Jobs", "Blog", "Podcast", "Students", "News"].forEach( (obj, idx) => { %>
+<%- include('../partials/navitem.ejs', {obj:obj}); %>
+<% }) %>
+        </ul>
+        <hr />
+        <ul class="nav flex-column">
+<% ["Twitter", "Facebook", "LinkedIn", "Instagram"].forEach( (obj, idx) => { %>
+<%- include('../partials/navitem.ejs', {obj:obj}); %>
+<% }) %>
+        </ul>
+    </div>
+    <div class="col-lg-3">
+        <ul class="nav flex-column">
+<% ["Help and FAQs", "Customer support", "Contact sales", "Recommend", "Privacy", "Terms"].forEach( (obj, idx) => { %>
+<%- include('../partials/navitem.ejs', {obj:obj}); %>
+<% }) %>
+        </ul>
+        <p>&copy; 2019 Casetext Inc.
+Casetext, Inc. and Casetext are not a law firm and do not provide legal advice.</p>
+    </div>
+  </div>
+</div>

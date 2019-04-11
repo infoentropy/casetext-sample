@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="jumbotron">
+        <h1 class="display-5">A true Lexis/Westlaw replacement for less than half the cost</h1>
+
+        <p class="lead">
+        With Casetext you get access to all 50-state case law, federal case law, federal and select state briefs, federal and state statutes, federal regulations, and much more.
+        </p>
+
+        <div class="sellit">
+        <% if (hasCoupon) { %>
+        <div>
+        Discount code <code><%= coupon.id %></code> applied!
+        <strong>Save <%= coupon.percent_off %>%</strong> off the original price.</div>
+        <% } %>
+        <button class="btn btn-primary btn-lg btn-danger">
+        Subscribe now for 
+        <% if (hasCoupon) { %>
+        <span class="strikethrough"><%=defaultPlanAmount %>/mo</span>
+        <span class="discounted"><%=calculatedPlanAmount%>/mo</span>
+        <% } else { %>
+        <%=defaultPlanAmount %>/mo
+        <% } %>
+        </button>
+        </div>
+      </div> <!-- jumbotron -->
+    </div>
+  </div>
+</div> <!-- container -->
+
+<div class="container snake">
+  <div class="row">
+    <div class="col-lg-6 order-lg-1">
+      <img class="dynimage" src="/tour-cara-w-pdf.jpg" />
+    </div>
+    <div class="col-lg-6 order-lg-2">
+      <p>
+      Casetext’s artificial intelligence search, CARA, finds cases on the same facts, legal issues, and jurisdiction as your matter. Just drag and drop a brief or complaint and CARA will find on-point cases for you.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-6 order-lg-2">
+      <img class="dynimage" src="/case-page.jpg" />
+    </div>
+    <div class="col-lg-6 order-lg-1">
+      <p>
+      Know instantly whether a case has been overturned, reversed, vacated, or superseded with our comprehensive citator
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 order-lg-1">
+      <img class="dynimage" src="/CourtBuilding.jpg" />
+    </div>
+    <div class="col-lg-6 order-lg-2">
+      <p>
+      Over 2,700 law firms across the country and across practice areas have switched to Casetext. Our customers include solo attorneys and the largest firms in the country, and everyone in between.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-6 order-lg-2">
+      <img class="dynimage" src="/happy-customers.jpg" />
+    </div>
+    <div class="col-lg-6 order-lg-1">
+      <p>
+      Our satisfaction level is through the roof. Most of our customers say they’d happily recommend Casetext to friends and colleagues. And they do.
+      </p>
+    </div>
+  </div>
+</div> <!-- .container.snake -->
+
+  <% include ../partials/footer.ejs %>
+
+</body>
+</html>

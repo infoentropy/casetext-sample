@@ -1,0 +1,75 @@
+body {
+  font-size: 16px;
+}
+
+.strikethrough { 
+  text-decoration:line-through;
+}
+.discounted {
+  font-size: 2rem;
+}
+
+/* mobile-first CSS */
+.jumbotron {
+padding-bottom: 40px; 
+}
+
+.jumbotron .btn-primary:hover {
+  background: #28a745; 
+  border-color: #28a745; 
+}
+.jumbotron p {
+max-width: 75%;
+margin: 1em 0 0 0;
+color:#888;
+}
+.jumbotron .lead {
+  margin-bottom:1em;
+}
+.jumbotron .sellit {
+  text-align: center;
+}
+.navbar + .jumbotron {
+margin-top: -20px; 
+}
+.jumbotron .lang-logo {
+display: block;
+background: #B01302;
+border-radius: 50%;
+overflow: hidden;
+width: 100px;
+height: 100px;
+margin: auto;
+border: 2px solid white; 
+}
+.jumbotron .lang-logo img {
+max-width: 100%; 
+}
+
+img.dynimage {
+  max-width: 100%;
+  height: auto;
+}
+
+.snake .row {
+  margin-bottom:5em;
+}
+
+.snake p {
+  font-size:1.3rem;
+}
+
+.footer .nav-link {
+  color:#999;
+}
+/* desktop */
+@media screen and (min-width: 768px) {
+  .jumbotron h1 {
+    width:70%;
+    max-width: 480px;
+  }
+  .jumbotron p {
+    max-width: 90%;
+  }
+
+}
