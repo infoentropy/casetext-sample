@@ -14,10 +14,6 @@ body {
 padding-bottom: 40px; 
 }
 
-.jumbotron .btn-primary:hover {
-  background: #28a745; 
-  border-color: #28a745; 
-}
 .jumbotron p {
 max-width: 75%;
 margin: 1em 0 0 0;
@@ -26,9 +22,22 @@ color:#888;
 .jumbotron .lead {
   margin-bottom:1em;
 }
-.jumbotron .sellit {
+
+.sellit {
   text-align: center;
 }
+.sellit .btn-primary:hover {
+  background: #28a745; 
+  border-color: #28a745; 
+}
+.sellit.bottom {
+  margin: 10em 0;
+}
+.sellit.bottom h1 {
+  width:70%;
+  margin: 1em auto;
+}
+
 .navbar + .jumbotron {
 margin-top: -20px; 
 }

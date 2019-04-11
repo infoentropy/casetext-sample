@@ -4,13 +4,15 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 
 // https://stripe.com/docs/recipes/custom-checkout
-// const keyPublishable = process.env.PUBLISHABLE_KEY;
-//const keySecret = process.env.SECRET_KEY;
-const keyPublishable = require('./secret').PUB_KEY;
-const keySecret = require('./secret').SECRET_KEY;
-const STRIPE_PLAN = require('./secret').STRIPE_PLAN;
+
+// IMPORTANT: set these ENV vars on Heroku otherwise Stripe won't work.
+const keyPublishable = process.env.PUBLISHABLE_KEY;
+const keySecret = process.env.SECRET_KEY;
 const stripe = require("stripe")(keySecret);
 const bodyParser = require("body-parser");
+
+const STRIPE_PLAN = 'monthly65';
+
 
 /* util */
 const decimalFormatter = new Intl.NumberFormat('en-US', {

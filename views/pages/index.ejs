@@ -90,6 +90,27 @@
   </div>
 </div> <!-- .container.snake -->
 
+<div class="sellit bottom container">
+  <h1>
+  Join the 497 firms who switched to Casetext last month
+  </h1>
+  <% if (hasCoupon) { %>
+  <div>
+  Discount code <code><%= coupon.id %></code> applied!
+  <strong>Save <%= coupon.percent_off %>%</strong> off the original price.</div>
+  <% } %>
+  <button class="btn btn-primary btn-lg btn-danger">
+  Subscribe now for 
+  <% if (hasCoupon) { %>
+  <span class="strikethrough"><%=defaultPlanAmount %>/mo</span>
+  <span class="discounted"><%=calculatedPlanAmount%>/mo</span>
+  <% } else { %>
+  <%=defaultPlanAmount %>/mo
+  <% } %>
+  </button>
+</div>
+
+
   <% include ../partials/footer.ejs %>
 
 </body>
